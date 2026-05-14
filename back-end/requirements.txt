@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-multipart
+openai-whisper
+pyannote.audio
+librosa
+torch
+torchaudio
+numpy
+google-cloud-storage
+google-cloud-aiplatform
