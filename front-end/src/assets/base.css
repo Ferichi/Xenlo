@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --app-bg: #f7f7f8;
+  --app-surface: #ffffff;
+  --app-surface-soft: #f3f4f6;
+  --app-surface-muted: #fafafa;
+
+  --app-text: #18181b;
+  --app-text-muted: #6b7280;
+
+  --app-border: #e5e7eb;
+  --app-border-strong: #d1d5db;
+
+  --app-primary: #4f46e5;
+  --app-primary-hover: #4338ca;
+
+  --app-radius-sm: 12px;
+  --app-radius-md: 16px;
+  --app-radius-lg: 20px;
+
+  --app-shadow-sm: 0 4px 16px rgba(15, 23, 42, 0.04);
+  --app-shadow-md: 0 12px 30px rgba(15, 23, 42, 0.06);
+
+  --app-container: 1120px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--app-bg);
+  color: var(--app-text);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#app {
+  background: var(--app-bg);
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: var(--app-bg);
+}
+
+.container {
+  width: min(100% - 32px, var(--app-container));
+  margin-inline: auto;
+}
+
+.page-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.page-head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.section-subtitle {
+  color: var(--app-text-muted);
+  font-size: 1rem;
+}
+
+.surface-card {
+  background: var(--app-surface);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-radius-lg);
+  box-shadow: var(--app-shadow-sm);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.p-component {
+  font-family: 'Inter', sans-serif;
+}
+
+.p-card,
+.p-datatable,
+.p-fileupload,
+.p-select,
+.p-selectbutton,
+.p-progressbar,
+.p-tag,
+.p-button {
+  color: var(--app-text);
+}
+
+@media (max-width: 960px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
